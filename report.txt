@@ -1,0 +1,9 @@
+My programs always execute the shortest remaining time programs. 
+This can reduce the throughput and time over head significantly when most of the process arrive very closely.That avoids if a big process arrives very early to block all the others.
+However, this algorithm is unfair to the others shorter programs since the program with the longest process time may only be executed at the end.
+Another bad performance situation is when time gaps between arrivals are very wide, algorithm may not have any choices.
+
+When evicting process happen, my algorithm base on VM but would prefer to remove those with shorter remaining time and smaller size.
+If you keep the long live process program in RAM, you can save massive time on swapping since the long live process takes more rounds.
+My program works very well if the ram is big enough and most all programs are relatively small. My algorithm can keep the longest& biggest in ram to avoid swapping it in each round.
+However, under the scenario when most of programs have similar size, or are too big, my algorithm works as bad as the spec VM since all the programs are still being swapped.
